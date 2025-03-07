@@ -1,0 +1,61 @@
+#experience-education {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--space-xl);
+  gap: var(--space-md);
+  width: 100%;
+}
+
+.tab-button {
+  background-color: transparent;
+  color: var(--color-text-secondary);
+  border: none;
+  padding: var(--space-sm) var(--space-md);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  position: relative;
+  outline: none;
+}
+
+.tab-button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-accent);
+  transition: width var(--transition-normal);
+}
+
+.tab-button.active {
+  color: var(--color-text-primary);
+}
+
+.tab-button.active::after {
+  width: 100%;
+}
+
+.tab-content {
+  width: 100%;
+  transition: opacity var(--transition-normal);
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .tabs {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+}

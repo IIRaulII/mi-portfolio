@@ -1,0 +1,82 @@
+header {
+  padding: var(--space-md) 0;
+  background-color: var(--color-bg-dark);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  transition: transform var(--transition-normal);
+}
+
+.logo img {
+  height: 35px;
+  width: 35px;
+  filter: brightness(0) invert(1);
+  transition: all var(--transition-normal);
+}
+
+/* Efecto hover para el logo */
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.logo:hover img {
+  filter: brightness(0) invert(0.7) sepia(1) saturate(5) hue-rotate(220deg);
+}
+
+/* Ajuste para el tema claro */
+.light-theme .logo img {
+  filter: brightness(0);
+}
+
+.light-theme .logo:hover img {
+  filter: brightness(0) invert(0.4) sepia(1) saturate(5) hue-rotate(220deg);
+}
+
+.navbar {
+  display: flex;
+  gap: var(--space-xl);
+}
+
+.navbar a {
+  color: var(--color-text-primary);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  transition: color var(--transition-normal);
+  text-transform: uppercase;
+}
+
+.navbar a:hover {
+  color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+  
+  .navbar {
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar .toggle-button {
+    display: none;
+  }
+}

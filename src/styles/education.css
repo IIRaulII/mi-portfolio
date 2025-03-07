@@ -1,0 +1,84 @@
+.heading-education {
+  margin-top: var(--space-xxl);
+}
+
+/* Reutilizamos los mismos estilos que Experience para mantener la coherencia */
+.experiences {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: var(--space-xxl);
+  position: relative;
+  width: 100%;
+  max-width: var(--container-lg);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.experiences::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background-color: var(--color-bg-lighter);
+}
+
+.experience-item {
+  display: flex;
+  margin-bottom: var(--space-xl);
+  position: relative;
+}
+
+.experience-circle {
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-accent);
+  border-radius: var(--border-radius-full);
+  margin-right: var(--space-md);
+  margin-top: 5px;
+  position: relative;
+  z-index: 2;
+}
+
+.experience-content {
+  flex: 1;
+}
+
+.experience-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.experience-title {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  text-align: left;
+}
+
+.date {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-tertiary);
+}
+
+.experience-item p {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  font-size: var(--font-size-sm);
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .experience-title-container {
+    flex-direction: column;
+  }
+  
+  .date {
+    margin-top: var(--space-xs);
+  }
+}

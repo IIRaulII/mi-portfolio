@@ -1,0 +1,120 @@
+/* Estilos para el botón de toggle (por ejemplo, para cambiar entre modo claro y oscuro) */
+.toggle-button {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 22px;
+  margin-left: var(--space-md);
+}
+
+.toggle-button input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-bg-lighter);
+  transition: var(--transition-normal);
+  border-radius: var(--border-radius-full);
+  border: 2px solid var(--color-bg-lighter);
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 1px;
+  background-color: var(--color-text-primary);
+  transition: var(--transition-normal);
+  border-radius: var(--border-radius-full);
+  z-index: 2;
+}
+
+/* Iconos para el toggle */
+.toggle-slider .icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-primary);
+  transition: all var(--transition-normal);
+  z-index: 1;
+}
+
+.toggle-slider .icon svg {
+  width: 10px;
+  height: 10px;
+}
+
+/* Posicionamiento de los iconos */
+.toggle-slider .icon-light {
+  right: 5px;
+}
+
+.toggle-slider .icon-dark {
+  left: 5px;
+}
+
+/* Estado checked (Modo Oscuro) */
+input:checked + .toggle-slider {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+input:checked + .toggle-slider:before {
+  transform: translateX(20px);
+}
+
+/* Estado no checked (Modo Claro) */
+input:not(:checked) + .toggle-slider {
+  background-color: #FFD700; /* Color amarillo dorado */
+  border-color: #FFD700;
+}
+
+/* Efectos hover */
+.toggle-button:hover .toggle-slider:before {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-button:hover input:checked + .toggle-slider {
+  background-color: var(--color-primary-light);
+}
+
+.toggle-button:hover input:not(:checked) + .toggle-slider {
+  background-color: #FFE44D; /* Amarillo más claro para el hover */
+}
+
+/* Tema claro */
+.light-theme .toggle-slider {
+  background-color: var(--color-bg-lighter);
+  border-color: var(--color-bg-lighter);
+}
+
+.light-theme .toggle-slider:before {
+  background-color: var(--color-text-primary);
+}
+
+.light-theme input:checked + .toggle-slider {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.light-theme input:not(:checked) + .toggle-slider {
+  background-color: #FFD700;
+  border-color: #FFD700;
+}
+
+.light-theme .toggle-slider .icon {
+  color: var(--color-text-primary);
+}
