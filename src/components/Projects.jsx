@@ -5,7 +5,7 @@ const Projects = () => {
   const projectUrls = {
     jdSports: "https://jdsportshop.netlify.app/",
     setecientosGramos: "https://setecientosgramos.com/",
-    pinterest: "https://pinterep.netlify.app/"
+    gamehub: "https://game-neon.netlify.app/"
   };
 
   return (
@@ -34,9 +34,9 @@ const Projects = () => {
           </div>
         </a>
         
-        <a href={projectUrls.pinterest} target="_blank" rel="noopener noreferrer" className="project-item">
+        <a href={projectUrls.gamehub} target="_blank" rel="noopener noreferrer" className="project-item">
           <div className="project-image">
-            <img src="/public/images/game-hub.png" alt="Proyecto Juegos Clásicos" />
+            <img src="/images/game-hub.png" alt="Proyecto Juegos Clásicos" />
           </div>
           <div className="project-info">
             <h3>Game Hub</h3>
