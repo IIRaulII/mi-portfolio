@@ -36,11 +36,11 @@ const Projects = () => {
         
         <a href={projectUrls.pinterest} target="_blank" rel="noopener noreferrer" className="project-item">
           <div className="project-image">
-            <img src="/images/pinterest-project.jpg" alt="Proyecto Pinterest" />
+            <img src="/public/images/game-hub.png" alt="Proyecto Juegos Clásicos" />
           </div>
           <div className="project-info">
-            <h3>Pinterest Clone</h3>
-            <div className="project-type">Red Social de Imágenes</div>
+            <h3>Game Hub</h3>
+            <div className="project-type">Juegos Clásicos</div>
             <div className="project-arrow">→</div>
           </div>
         </a>
